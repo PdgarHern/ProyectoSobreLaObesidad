@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: ESRI ArcMap 9.0.0.535 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="68.03109"
+   height="57.15538"
+   viewBox="0 0 264.55309 118.10102"
+   enable-background="new 0 0 777.74173 413.26299"
+   version="1.0"
+   id="Municipios de la provincia de Santa Cruz de Tenerife"
+   sodipodi:version="0.32"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="El_Hierro_municipios.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata227">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs225">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 100 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="200 : 100 : 1"
+       inkscape:persp3d-origin="100 : 66.666667 : 1"
+       id="perspective21" />
+    <clipPath
+       id="SVG_CP_1">
+      <path
+         id="path6"
+         d="m 0,0 0,413.26299 777.74173,0 L 777.74173,0 0,0 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2006">
+      <path
+         d="m 0,0 0,413.26299 777.74173,0 L 777.74173,0 0,0 z"
+         id="path2845" />
+    </clipPath>
+    <style
+       id="style2168"
+       type="text/css">
+   
+    .str0 {stroke:#1F1A17;stroke-width:0.952941}
+    .fil0 {fill:white}
+   
+  </style>
+    <metadata
+       id="CorelCorpID_0Corel-Layer" />
+    <clipPath
+       id="clipPath2312">
+      <path
+         id="path2314"
+         d="m 0,0 0,413.26299 777.74173,0 L 777.74173,0 0,0 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath2308">
+      <path
+         d="m 0,0 0,413.26299 777.74173,0 L 777.74173,0 0,0 z"
+         id="path2310" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="682"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="2.43"
+     inkscape:cx="34.015545"
+     inkscape:cy="-4.8934568"
+     inkscape:window-x="647"
+     inkscape:window-y="187"
+     inkscape:current-layer="Municipios de la provincia de Santa Cruz de Tenerife"
+     width="200px"
+     height="200px"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <g
+     id="g4289"
+     transform="translate(-256.59432,-147.58102)">
+    <path
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccc"
+       clip-path="url(#SVG_CP_1)"
+       d="m 139.57243,366.36316 -1.81561,1.4419 -4.10768,-0.47882 -16.7695,2.46952 -7.77227,1.71552 -1.58985,-2.12591 0.71998,-3.84026 1.91996,-0.96007 0.23999,-4.80033 -0.95997,-1.20008 1.19997,-2.64018 3.11993,-0.96007 0,-0.96006 2.39994,-1.4401 2.63994,0.72005 0.24,1.4401 1.91995,1.68011 8.6398,2.16015 3.11993,0 6.71985,-2.16015 2.63993,-0.24001 4.5599,-3.60025 2.63994,-3.36023 5.03988,-2.8802 1.19997,-1.68012 0.47999,-3.12021 -1.43996,-3.60025 2.15995,2.40017 1.19997,3.84026 -0.24,3.84026 -2.15995,5.04035 2.39995,4.3203 -4.07991,6.00041 -5.75986,3.36023 -3.11993,0.24002 -5.38423,-0.62205 z"
+       id="Frontera"
+       style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16659069;stroke-linejoin:round;stroke-miterlimit:6.5714283;stroke-opacity:1;stroke-dasharray:none"
+       transform="matrix(3.333396,0,0,3.333396,-97.961186,-1001.4641)" />
+    <path
+       sodipodi:nodetypes="ccccccccccccccccccccccccc"
+       transform="matrix(3.333396,0,0,3.333396,-97.961186,-1001.4641)"
+       style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.16659069;stroke-linejoin:round;stroke-miterlimit:6.5714283;stroke-opacity:1;stroke-dasharray:none"
+       id="El Pinar"
+       d="m 162.47625,378.26598 -1.19997,0.96007 -0.47999,2.8802 -1.67996,2.16014 0.24,7.68053 -2.15995,2.40017 -3.83992,0.24001 -1.67996,-2.40016 -3.35992,-1.20008 -2.15995,-3.12022 -0.71998,-2.40016 -1.91996,-1.4401 -0.23999,-2.16015 -5.51988,-4.3203 -20.15953,-4.32029 -6.47985,0 -1.55095,-2.01904 23.97362,-3.84147 4.11314,0.72095 1.67956,-1.47476 5.62385,0.37389 5.51987,0.72005 5.75987,-0.96007 2.39994,-1.20008 3.83991,12.72087 z"
+       clip-path="url(#SVG_CP_1)" />
+    <path
+       transform="matrix(3.333396,0,0,3.333396,-97.961186,-1001.4641)"
+       style="fill:#ffff00;fill-rule:evenodd;stroke:#000000;stroke-width:1.16659069;stroke-linejoin:round;stroke-miterlimit:6.5714283;stroke-opacity:1;stroke-dasharray:none"
+       id="Valverde"
+       d="m 162.47625,378.26598 -3.83991,-12.72087 -2.39994,1.20008 -5.75987,0.96007 -5.51987,-0.72005 3.11993,-0.24002 5.75986,-3.36023 4.07991,-6.00041 -2.39995,-4.3203 2.15995,-5.04035 0.24,-3.84026 -1.19997,-3.84026 -2.15995,-2.40017 1.19997,0.24002 1.43997,-1.20008 2.87993,-0.48004 2.63994,-3.84026 2.15995,-0.72005 2.63994,0.72005 2.39994,-2.40017 5.51988,0.24002 0.71998,1.4401 3.35992,0.48003 -0.23999,1.20009 2.39994,1.92013 0.47999,1.92013 -0.95998,0.48003 3.11993,3.60025 0.23999,2.64018 -3.59991,5.04035 -1.19997,0 -0.24,1.20008 -0.47999,-0.72005 -1.91995,3.84026 -1.43997,0.96007 1.19997,1.92013 -4.55989,6.72046 -0.47999,2.8802 -1.43997,1.20008 -4.55989,0 -2.39995,2.64019 -0.95998,8.40057 z"
+       clip-path="url(#SVG_CP_1)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:7.77741766;stroke-linejoin:round;stroke-miterlimit:6.5714283;stroke-opacity:1;stroke-dasharray:none"
+       d="m 468.40361,99.389929 -7.91682,8.020981 -8.85433,-2.39588 -7.18763,2.39588 -8.85434,12.81274 -9.58351,1.56253 -4.79176,4.06258 -3.9584,-0.83335 4.79175,11.97939 -1.56253,10.41687 -4.06257,5.6251 -16.77115,9.58351 -8.85434,11.25022 -15.20861,11.97939 -8.75017,0.83335 -22.39625,7.18763 -10.41687,0 -28.75054,-7.18763 -6.45845,-5.62511 -0.72918,-4.79176 -8.85433,-2.39587 -8.02099,4.79175 0,3.22923 -10.41686,3.12506 -3.95841,8.85433 3.22923,3.95841 -0.83335,16.04197 -6.35429,3.12506 -2.39588,12.81274 11.9794,12.81274 21.5629,0 67.18876,14.37527 18.43785,14.47944 0.83335,7.18763 6.35429,4.79176 2.39588,8.02098 7.18763,10.41687 11.25021,3.9584 5.52094,8.02099 12.81274,-0.83335 7.18763,-8.02099 -0.72918,-25.52131 5.52094,-7.2918 1.6667,-9.58352 3.95841,-3.12505 3.22922,-28.02136 8.02099,-8.85434 15.20862,0 4.79175,-3.95841 1.56253,-9.58351 15.20862,-22.39625 -3.9584,-6.45846 4.79175,-3.22923 6.35429,-12.70857 1.6667,2.39588 0.72918,-4.06258 4.06257,0 11.9794,-16.77114 -0.83335,-8.85434 -10.41687,-11.97939 3.22923,-1.56253 -1.56253,-6.45845 -8.02098,-6.35429 0.83335,-3.95841 -11.25021,-1.6667 -2.39588,-4.79175 -18.43785,-0.833351 z"
+       id="path2321" />
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+#error-educative-center {
+    display: none;
+    color: red;
+}
+
+#error-register-data {
+    display: none;
+    color: red;
+}
+
+#error-student-class {
+    display: none;
+    color: red;
+}
+
+#error-sex {
+    display: none;
+    color: red;
+}
+
+#error-age {
+    display: none;
+    color: red;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+#error-weight {
+    display: none;
+    color: red;
+}
+
+#error-bmi {
+    display: none;
+    color: red;
+}
+
+#error-fat-percentage {
+    display: none;
+    color: red;
+}
+
+#error-hydratation-percentage {
+    display: none;
+    color: red;
+}
+
+#error-muscle-weight {
+    display: none;
+    color: red;
+}
+
+#error-muscle-mass-level {
+    display: none;
+    color: red;
+}
+
+#error-bone-weight {
+    display: none;
+    color: red;
+}
+
+#error-kilocalories {
+    display: none;
+    color: red;
+}
+
+#error-methabolic-age {
+    display: none;
+    color: red;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+#error-height {
+    display: none;
+    color: red;
+}
+
+#error-abs-perimeter {
+    display: none;
+    color: red;
+}
+
+#error-activity {
+    display: none;
+    color: red;
+}

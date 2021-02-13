@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDhWf5m2KA_nNabJVzHrvW-dKooUmdQ8JY",
+            authDomain: "proyectoobesidad-4f58b.firebaseapp.com",
+            databaseURL: "https://proyectoobesidad-4f58b-default-rtdb.firebaseio.com",
+            projectId: "proyectoobesidad-4f58b",
+            storageBucket: "proyectoobesidad-4f58b.appspot.com",
+            messagingSenderId: "11607285724",
+            appId: "1:11607285724:web:3b3a3c86b404d2d3e23919"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js"></script>
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="img/logoNavBar.jpg" alt="Logo" style="width:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="IslandsMaps.html">Mapa de las Islas</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="form.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="galery.html">Galería</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="register.html" id="register">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="login.html" id="sign-in">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: smaller; color: black;" class="nav-link" href="#" id="user-email"></a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="#" id="sign-out">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="jumbotron-color" class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 id="head-color">Proyecto Contra la Obesidad</h1>
+                        <p id="paragraph">Encuentra información sobre los niveles de obesidad y sobrepeso en los jóvenes
+                            de las Islas
+                            Canarias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h1>Introducción</h1>
+                    <p style="font-size: larger;">¡Bienvenidos a este proyecto contra la obesidad a nivel de las Islas
+                        Canarias!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-10">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/LP.png" alt="Imagen1" class="img-fluid rounded">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/LL.png" alt="Imagen2" class="img-fluid rounded">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/PdR.png" alt="Imagen3" class="img-fluid rounded">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p style="font-size: larger;">A través de esta página podrás visionar datos precisos sobre los
+                    porcentajes de sobre peso y obesidad en cada municipio de las Islas Canarias.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="img/Intro1.jpg" alt="INtro1" class="img-fluid rounded">
+            </div>
+            <div class="col-6">
+                <p style="font-size: larger;">Además, también puedes rellenar un formulario con algunos de tus datos
+                    para descubrir cuál es tu estado de salud y ver algunos consejos sobre qué
+                    hacer para mejorarla.</p>
+                <p style="font-size: large; font-weight: bolder;">La Organización Mundial de la Salud (OMS) define como
+                    obesidad cuando el índice de masa corporal
+                    (IMC, cociente entre el peso y la estatura de un individuo al cuadrado) es igual o superior a 30
+                    kg/m².
+                    También se considera signo de obesidad un perímetro abdominal en hombres mayor o igual a 102 cm y
+                    en mujeres mayor o igual a 88 cm.</p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p style="font-size: larger;">Los datos de esta página han sido recopilados de todos los jóvenes
+                    escolarizados de entre 12 y 17 años de todos los centros de Canarias.</p>
+                <p style="font-size: larger;">Mediante el uso de una váscula especial, se obtiene el peso graso,
+                    muscular y óseo de cada individuo.</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Nivel de obesidad por municipios</h1>
+                <p style="font-size: larger;">A continuación pueden observar 7 gráficos (uno por cada isla) en los
+                    que comparar los niveles de obesidad de cada municipio.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Tenerife</h1>
+        <svg id="weight-graph-tenerife" width="100%" height="75vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-tenerife">0</span> municipios con un índice de peso medio elevado
+            </h2>
+        </div>
+        <h1>Gran Canaria</h1>
+        <svg id="weight-graph-gran-canaria" width="100%" height="75vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-gran-canaria">0</span> municipios con un índice de peso medio
+                elevado</h2>
+        </div>
+        <h1>Fuerteventura</h1>
+        <svg id="weight-graph-fuerteventura" width="100%" height="20vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-fuerteventura">0</span> municipios con un índice de peso medio
+                elevado</h2>
+        </div>
+        <h1>Lanzarote</h1>
+        <svg id="weight-graph-lanzarote" width="100%" height="25vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-lanzarote">0</span> municipios con un índice de peso medio elevado
+            </h2>
+        </div>
+        <h1>La Palma</h1>
+        <svg id="weight-graph-la-palma" width="100%" height="40vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-la-palma">0</span> municipios con un índice de peso medio elevado
+            </h2>
+        </div>
+        <h1>La Gomera</h1>
+        <svg id="weight-graph-la-gomera" width="100%" height="20vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-la-gomera">0</span> municipios con un índice de peso medio elevado
+            </h2>
+        </div>
+        <h1>El Hierro</h1>
+        <svg id="weight-graph-el-hierro" width="100%" height="20vh"></svg>
+        <div class="jumbotron">
+            <h2>Hay <span id="over-weight-el-hierro">0</span> municipios con un índice de peso medio elevado
+            </h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p style="font-weight: bolder; font-size: larger;">Si lo desea, también puede ver esta información de
+                    forma más gráfica en el apartado "Mapa de las Islas",
+                    que puede encontrar en la barra de navegación.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <footer id="footer">
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 style="font-size: x-large; font-weight: 600;">Proyecto sobre la obesidad en Canarias</h1>
+                    <p style="font-size: medium; font-weight: 300;">Por un futuro saludable para los jóvenes de nuestras islas. Juntos podemos luchar contra la lacra de la obesidad y conseguir que todos los municipios alcancen niveles saludables.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h1 style="font-size: x-large; font-weight: 400;">Gracias por su visita</h1>
+                    <p style="font-size: medium; font-weight: 300;">Proyecto realizado por Pedro García Hernández para IES El Rincón.</p>
+                    <a href="rss.xml"><img src="img/rss.png" alt="RSS" style='width: 60px;'></a>
+                    <p style="font-size: medium; font-weight: 300;">Pincha en el icono para visualizar información adicional</p>
+                </div>
+            </div>
+            <br />
+        </div>
+    </footer>
+</body>
+
+</html>

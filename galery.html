@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDhWf5m2KA_nNabJVzHrvW-dKooUmdQ8JY",
+            authDomain: "proyectoobesidad-4f58b.firebaseapp.com",
+            databaseURL: "https://proyectoobesidad-4f58b-default-rtdb.firebaseio.com",
+            projectId: "proyectoobesidad-4f58b",
+            storageBucket: "proyectoobesidad-4f58b.appspot.com",
+            messagingSenderId: "11607285724",
+            appId: "1:11607285724:web:3b3a3c86b404d2d3e23919"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script src="js/galery.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="img/logoNavBar.jpg" alt="Logo" style="width:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="index.html">Introducción</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="form.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="IslandsMaps.html">Mapa de las Islas</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="#" id="register">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="login.html" id="sign-in">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: smaller; color: black;" class="nav-link" href="#" id="user-email"></a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="#" id="sign-out">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br />
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="jumbotron-color" class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 id="head-color">Galería de fotos</h1>
+                    </div>
+                </div>
+
+                <ul style="font-style: italic;" class="nav nav-tabs nav-pills">
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link active" data-toggle="tab"
+                            href="#tenerife">Tenerife</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link" data-toggle="tab" href="#gran-canaria">Gran Canaria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link" data-toggle="tab" href="#fuerteventura">Fuerteventura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link" data-toggle="tab" href="#lanzarote">Lanzarote</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link" data-toggle="tab" href="#la-palma">La Palma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link" data-toggle="tab" href="#la-gomera">La Gomera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: larger;" class="nav-link" data-toggle="tab" href="#el-hierro">El Hierro</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="tab-content">
+                <div class="tab-pane container active" id="tenerife">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/TF1.jpg" alt="tf1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>Vista aérea de la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF2.jpg" alt="tf2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>Auditorio de Tenerife.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF3.jpg" alt="tf3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>Las Cañadas del Teide.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF4.jpg" alt="tf4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>Vista del Teide en la lejanía.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF4">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF5.jpg" alt="tf5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>Pueblo de Candelaria.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF6.jpg" alt="tf6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>La Laguna.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF7.jpg" alt="tf7" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 7</h3>
+                                    <p>Santa Cruz de Tenerife.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF7">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/TF8.png" alt="tf8" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 8</h3>
+                                    <p>Vista alternativa de Santa Cruz de Tenerife.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#TF8">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="gran-canaria">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/GC1.jpg" alt="gc1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>Vista de la costa.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC2.jpg" alt="gc2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>Vista aérea de las Canteras.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC3.jpg" alt="gc3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>El Roque Nublo.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC4.jpg" alt="gc4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>Las dunas de Maspalomas.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC4">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC5.jpg" alt="gc5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>Vista de Puerto Rico.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC6.jpg" alt="gc6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>Vista marítima desde Las Palmas de Gran Canaria.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC7.jpg" alt="gc7" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 7</h3>
+                                    <p>Imagen de uno de los barrancos de la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC7">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/GC8.jpg" alt="gc8" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 8</h3>
+                                    <p>Vista del Roque Bentayga.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#GC8">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="fuerteventura">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/FT1.jpg" alt="ft1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>Playa de Corralejo.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT2.jpg" alt="ft2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>Las montañas de la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT3.jpg" alt="ft3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>Zona hotelera de Fuerteventura.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT4.jpg" alt="ft4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>Vista lejana de la Antigua.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT4">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT5.jpg" alt="ft5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>Entrada de la Antigua.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT6.jpg" alt="ft6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>Vistas del Malpaís.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT7.jpg" alt="ft7" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 7</h3>
+                                    <p>La montaña de Tindaya.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT7">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/FT8.jpg" alt="ft8" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 8</h3>
+                                    <p>La caldera de Gairía.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#FT8">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="lanzarote">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/LZ1.jpg" alt="lz1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>Imagen del Lago Verde.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ2.jpg" alt="lz2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>Los Jameos del Agua.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ3.jpg" alt="lz3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>Foto de un paseo marítimo.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ4.jpg" alt="lz4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>Los pueblos característicos de la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ4">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ5.jpg" alt="lz5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>La zona del Malpaís.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ6.jpg" alt="lz6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>Timanfaya (Montañas del fuego).</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ7.jpg" alt="lz7" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 7</h3>
+                                    <p>Arrecife.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ7">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LZ8.jpg" alt="lz8" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 8</h3>
+                                    <p>Las playas de la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LZ8">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="la-palma">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/LP1.jpg" alt="lp1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>El Roque de los Muchachos.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LP1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LP2.jpg" alt="lp2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>La isla verde.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LP2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LP3.jpg" alt="lp3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>Pueblos costeros en la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LP3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LP4.jpg" alt="lp4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>Puesta de sol en La Palma.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LP4">Pincha aquí</button>
+                                </div>
+                            </article>
+                            <article class="card">
+                                <img src="img/LP5.jpg" alt="lp5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>Santa Cruz de La Palma.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LP5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LP6.jpg" alt="lp6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>La caldera de Taburiente.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LP6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="la-gomera">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/LG1.jpg" alt="lg1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>Acantilado de Los Órganos.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LG1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LG2.jpg" alt="lg2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>Pueblos en medio de la naturaleza.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LG2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LG3.jpg" alt="lg3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>Las escarpadas costas de la isla.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LG3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LG4.jpg" alt="lg4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>La Laurisilva.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LG4">Pincha aquí</button>
+                                </div>
+                            </article>
+                            <article class="card">
+                                <img src="img/LG5.jpg" alt="lg5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>Vista de Tenerife desde Garajonay.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LG5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/LG6.jpg" alt="lg6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>San Sebastián de la Gomera.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#LG6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane container fade" id="el-hierro">
+                    <div class="col-12">
+                        <div class="cards">
+                            <article class="card">
+                                <img src="img/EH1.jpg" alt="eh1" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 1</h3>
+                                    <p>Casas antiguas en Frontera.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#EH1">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/EH2.jpg" alt="eh2" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 2</h3>
+                                    <p>Arco de piedra en El Hierro.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#EH2">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/EH3.jpg" alt="eh3" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 3</h3>
+                                    <p>Punta grande y el hotel más pequeño del mundo.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#EH3">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/EH4.jpg" alt="eh4" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 4</h3>
+                                    <p>Entrada de aguas cristalinas.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#EH4">Pincha aquí</button>
+                                </div>
+                            </article>
+                            <article class="card">
+                                <img src="img/EH5.jpg" alt="eh5" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 5</h3>
+                                    <p>Monumento al Meridiano Cero.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#EH5">Pincha aquí</button>
+                                </div>
+                            </article>
+                        
+                            <article class="card">
+                                <img src="img/EH6.jpg" alt="eh6" class="img-fluid rounded" style="width: 200px;">
+                                <div class="text">
+                                    <h3>Foto 6</h3>
+                                    <p>Vista aérea de El Pinar.</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#EH6">Pincha aquí</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="TF1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF1.jpg" alt="TF1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF2.jpg" alt="TF2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF3.jpg" alt="TF3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF4.jpg" alt="TF4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF5.jpg" alt="TF5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF6.jpg" alt="TF6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF7">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF7.jpg" alt="TF7" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="TF8">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Tenerife</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/TF8.png" alt="TF8" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC1.jpg" alt="GC1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC2.jpg" alt="GC2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC3.jpg" alt="GC3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC4.jpg" alt="GC4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC5.jpg" alt="GC5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC6.jpg" alt="GC6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC7">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC7.jpg" alt="GC7" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="GC8">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Gran Canaria</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/GC8.jpg" alt="GC8" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT1.jpg" alt="FT1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT2.jpg" alt="FT2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT3.jpg" alt="FT3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT4.jpg" alt="FT4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT5.jpg" alt="FT5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT6.jpg" alt="FT6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT7">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT7.jpg" alt="FT7" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="FT8">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Fuerteventura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/FT8.jpg" alt="FT8" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ1.jpg" alt="LZ1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ2.jpg" alt="LZ2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ3.jpg" alt="LZ3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ4.jpg" alt="LZ4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ5.jpg" alt="LZ5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ6.jpg" alt="LZ6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ7">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ7.jpg" alt="LZ7" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LZ8">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de Lanzarote</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LZ8.jpg" alt="LZ8" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LP1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Palma</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LP1.jpg" alt="LP1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LP2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Palma</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LP2.jpg" alt="LP2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LP3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Palma</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LP3.jpg" alt="LP3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LP4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Palma</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LP4.jpg" alt="LP4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LP5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Palma</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LP5.jpg" alt="LP5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LP6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Palma</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LP6.jpg" alt="LP6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LG1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Gomera</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LG1.jpg" alt="LG1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LG2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Gomera</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LG2.jpg" alt="LG2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LG3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Gomera</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LG3.jpg" alt="LG3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LG4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Gomera</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LG4.jpg" alt="LG4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LG5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Gomera</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LG5.jpg" alt="LG5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="LG6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de La Gomera</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/LG6.jpg" alt="LG6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="EH1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de El Hierro</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/EH1.jpg" alt="EH1" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="EH2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de El Hierro</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/EH2.jpg" alt="EH2" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="EH3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de El Hierro</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/EH3.jpg" alt="EH3" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="EH4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de El Hierro</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/EH4.jpg" alt="EH4" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="EH5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de El Hierro</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/EH5.jpg" alt="EH5" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="EH6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Foto de El Hierro</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="img/EH6.jpg" alt="EH6" class="img-fluid rounded" style="width: 600px;">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <footer id="footer2">
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 style="font-size: x-large; font-weight: 600;">Proyecto sobre la obesidad en Canarias</h1>
+                    <p style="font-size: medium; font-weight: 300;">Por un futuro saludable para los jóvenes de nuestras
+                        islas. Juntos podemos luchar contra la lacra de la obesidad y conseguir que todos los municipios
+                        alcancen niveles saludables.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h1 style="font-size: x-large; font-weight: 400;">Gracias por su visita</h1>
+                    <p style="font-size: medium; font-weight: 300;">Proyecto realizado por Pedro García Hernández para
+                        IES El Rincón.</p>
+                        <a href="rss.xml"><img src="img/rss.png" alt="RSS" style='width: 60px;'></a>
+                        <p style="font-size: medium; font-weight: 300;">Pincha en el icono para visualizar información adicional</p>
+                </div>
+            </div>
+            <br />
+        </div>
+    </footer>
+</body>
+
+</html>

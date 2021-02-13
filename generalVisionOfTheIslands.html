@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visión general del archipiélago</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDhWf5m2KA_nNabJVzHrvW-dKooUmdQ8JY",
+            authDomain: "proyectoobesidad-4f58b.firebaseapp.com",
+            databaseURL: "https://proyectoobesidad-4f58b-default-rtdb.firebaseio.com",
+            projectId: "proyectoobesidad-4f58b",
+            storageBucket: "proyectoobesidad-4f58b.appspot.com",
+            messagingSenderId: "11607285724",
+            appId: "1:11607285724:web:3b3a3c86b404d2d3e23919"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/municipalitySelector.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="img/logoNavBar.jpg" alt="Logo" style="width:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="index.html">Introducción</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="IslandsMaps.html">Mapa de las Islas</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="form.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: x-large;" class="nav-link" href="galery.html">Galería</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="#" id="register">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="login.html" id="sign-in">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: smaller; color: black;" class="nav-link" href="#" id="user-email"></a>
+                </li>
+                <li class="nav-item">
+                    <a style="font-size: large;" class="nav-link" href="#" id="sign-out">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="jumbotron-color" class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 id="head-color">Visión general de los municipios</h1>
+                        <p id="paragraph">Este página está pensada para poder encontrar fácilmente los diferentes municipios de nuestro archipiélago.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                <object id="svg-object" data="img/Mapa_Canarias_municipios.svg" type="image/svg+xml"
+                    class="img-fluid"></object>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4 justify-content-center">
+        <div class="col-sm-6 col-md-4">
+            <div class="form-group">
+                <label for="municipalities-in-tenerife">Selecciona un municipio de Tenerife:</label>
+                <select class="form-control" id="municipalities-in-tenerife">
+                </select>
+                <label for="municipalities-in-gran-canaria">Selecciona un municipio de Gran Canaria:</label>
+                <select class="form-control" id="municipalities-in-gran-canaria">
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="form-group">
+                <label for="municipalities-in-fuerteventura">Selecciona un municipio de Fuerteventura:</label>
+                <select class="form-control" id="municipalities-in-fuerteventura">
+                </select>
+                <label for="municipalities-in-lanzarote">Selecciona un municipio de Lanzarote:</label>
+                <select class="form-control" id="municipalities-in-lanzarote">
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="form-group">
+                <label for="municipalities-in-la-palma">Selecciona un municipio de La Palma:</label>
+                <select class="form-control" id="municipalities-in-la-palma">
+                </select>
+                <label for="municipalities-in-la-gomera">Selecciona un municipio de La Gomera:</label>
+                <select class="form-control" id="municipalities-in-la-gomera">
+                </select>
+                <label for="municipalities-in-el-hierro">Selecciona un municipio de El Hierro:</label>
+                <select class="form-control" id="municipalities-in-el-hierro">
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 style="font-size: x-large; font-weight: 600;">Proyecto sobre la obesidad en Canarias</h1>
+                    <p style="font-size: medium; font-weight: 300;">Por un futuro saludable para los jóvenes de nuestras islas. Juntos podemos luchar contra la lacra de la obesidad y conseguir que todos los municipios alcancen niveles saludables.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h1 style="font-size: x-large; font-weight: 400;">Gracias por su visita</h1>
+                    <p style="font-size: medium; font-weight: 300;">Proyecto realizado por Pedro García Hernández para IES El Rincón.</p>
+                    <a href="rss.xml"><img src="img/rss.png" alt="RSS" style='width: 60px;'></a>
+                    <p style="font-size: medium; font-weight: 300;">Pincha en el icono para visualizar información adicional</p>
+                </div>
+            </div>
+            <br />
+        </div>
+    </footer>
+</body>
+
+</html>

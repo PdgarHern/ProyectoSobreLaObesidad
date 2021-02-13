@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+    <channel>
+        <title>Obesidad en Canarias</title>
+        <link>index.html</link>
+        <description>Págnia dónde se recogen y se visualizan datos referentes a los niveles de obesidad entre la juventud de Canarias.</description>
+        <item>
+            <title>Formulario</title>
+            <link>form.html</link>
+            <description>Aquí se registran datos sobre los alumnos y puedes visualizar algunos de estos.</description>
+        </item>
+        <item>
+            <title>Mapa de las Islas</title>
+            <link>IslandsMaps.html</link>
+            <description>En este apartado puedes visualizar los distintos niveles de la obesidad en cada municipio del archipiélago.</description>
+        </item>
+        <item>
+            <title>Galería</title>
+            <link>galery.html</link>
+            <description>Página en la que visualizar distintas fotografías de todas las Islas del archipiélago.</description>
+        </item>
+    </channel>          
+</rss>

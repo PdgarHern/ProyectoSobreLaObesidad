@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDhWf5m2KA_nNabJVzHrvW-dKooUmdQ8JY",
+            authDomain: "proyectoobesidad-4f58b.firebaseapp.com",
+            databaseURL: "https://proyectoobesidad-4f58b-default-rtdb.firebaseio.com",
+            projectId: "proyectoobesidad-4f58b",
+            storageBucket: "proyectoobesidad-4f58b.appspot.com",
+            messagingSenderId: "11607285724",
+            appId: "1:11607285724:web:3b3a3c86b404d2d3e23919"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login-styles.css">
+    <script src="js/auth.js"></script>
+</head>
+
+<body style="background-color: rgb(122, 130, 202);">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="img/logoNavBar.jpg" alt="Logo" style="width:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a style="font-size: larger;" class="nav-link" href="index.html" id="register">Volver</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 15%;">
+        <div class="row">
+            <div class="col-sm-12" style="background-color: rgb(96, 177, 93);">
+                <br />
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email" style="font-weight: bolder ;">Correo electrónico:</label>
+                        <input type="email" class="form-control" placeholder="Correo electrónico" id="email">
+                        <div id="error-email">*este campo es obligatorio</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pwd" style="font-weight: bolder ;">Contraseña:</label>
+                        <input type="password" class="form-control" placeholder="Contraseña" id="pwd">
+                        <div id="error-pwd">*este campo es obligatorio</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+                <br />
+            </div>
+
+            <h2 class="display-8" id="logged-in-succesful">Sesión iniciada con éxito</h2>
+            <h2 class="display-8" id="logged-in-failure">Ha ocurrido un error</h2>
+        </div>
+    </div>
+</body>
+
+</html>
