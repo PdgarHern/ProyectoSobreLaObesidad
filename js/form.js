@@ -325,7 +325,7 @@ function checkIfUserIsLoggedIn() {
             document.getElementById("user-email").style.display = "block";
             document.getElementById("sign-out").style.display = "block";
 
-            if (user.email == "pdgarher@gmail.com") {
+            if (user.email == "admin@admin.com") {
                 showObesityDataFromFirebaseAdmin();
             } else {
                 showObesityDataFromFirebaseUser();
